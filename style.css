@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    padding: 1% 2%;
+    display: flex;
+    align-items: center;
+}
+header h1{
+    font-size: 1.4em;
+    margin-right: 3%;
+    color: #424242;
+}
+.containerPesquisa{
+    display: flex;
+    background-color: #f1f1f1;
+    width: 35%;
+    padding: 10px;
+    align-items: center;
+}
+.containerPesquisa .iconPesquisa{
+    font-size: 1.2em;
+    color: #555555;
+}
+.containerPesquisa input{
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    width: 90%;
+    outline: none;
+}
+.selectTypes{
+    background: #00000017;
+    padding: 7px;
+    border: none;
+    outline: none;
+}
+main{
+    flex-grow: 1;
+    background-color: #e0e0e0;
+}
+.galeriaImagens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 2%;
+    justify-content: center;
+}
+
+.card-imagem{
+    height: 300px;
+    width: 300px;
+    background-color: teal;
+    overflow: hidden;
+    position: relative;
+}
+
+.descImg{
+    color: #fff;
+    bottom: -25px;
+    position: absolute;
+    padding: 8px;
+    opacity: 0;
+    font-size: .8em;
+    transition: .8s;
+}
+.icons{
+    vertical-align: text-bottom;
+    font-size: 1.5em;
+    margin-right: 3px;
+}
+.card-imagem img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+.card-imagem:hover{
+    filter: brightness(0.8);
+    transition: .5s;
+}
+.card-imagem:hover > .descImg{
+    opacity: 1;
+    bottom: 5px;
+}
+footer{
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    color: #545454;
+    font-weight: 200;
+}
