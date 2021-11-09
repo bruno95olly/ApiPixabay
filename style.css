@@ -73,6 +73,7 @@ main{
     opacity: 0;
     font-size: .8em;
     transition: .8s;
+    text-shadow: 2px 2px 2px #000a;
 }
 .icons{
     vertical-align: text-bottom;
@@ -86,10 +87,14 @@ main{
     width: 100%;
 }
 .card-imagem:hover{
-    filter: brightness(0.8);
     transition: .5s;
 }
-.card-imagem:hover > .descImg{
+.card-imagem a img:hover{
+    filter: brightness(0.5);
+    transition: .5s;
+
+}
+.card-imagem a:hover > .descImg{
     opacity: 1;
     bottom: 5px;
 }

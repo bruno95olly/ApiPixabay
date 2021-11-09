@@ -101,19 +101,20 @@ const buscarImagens = async(evento) => {
 }
 
 
-
 const criaCard = (elemento, indice, array) => {
     const container = document.querySelector(".galeriaImagens")
     const novaDiv = document.createElement("div")
     novaDiv.classList.add("card-imagem")
     novaDiv.innerHTML = 
-    `<img src="${elemento.largeImageURL}">
-     <div class="descImg">
-        ${elemento.tags}, 
-        <ion-icon class="icons" name="heart"></ion-icon>${elemento.likes}
-        <ion-icon class="icons" name="chatbubble"></ion-icon>${elemento.comments}
-        <ion-icon class="icons" name="bookmark"></ion-icon>
-    </div>
+    `<a href="${elemento.pageURL}" target="_blank">
+        <img src="${elemento.largeImageURL}">
+        <div class="descImg">
+            ${elemento.tags}
+            <ion-icon class="icons" name="heart"></ion-icon>${elemento.likes}
+            <ion-icon class="icons" name="chatbubble"></ion-icon>${elemento.comments}
+            <ion-icon class="icons" name="bookmark"></ion-icon>
+        </div>
+    </a>
     `
     container.appendChild(novaDiv)
 }
